@@ -38,7 +38,7 @@ public class PushController {
         try{
 
             if(secret==secret1){
-                System.out.println("hello");
+                System.out.println("helloasasasa");
                 //System.out.println(request);
             }
 
