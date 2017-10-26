@@ -32,7 +32,7 @@ public class PushController {
 
     }
 
-    @RequestMapping(value = "/meraki" ,method= RequestMethod.POST ,consumes = {"application/json"})
+    @RequestMapping(value = "/meraki" ,method= RequestMethod.POST)
     public String getData(@RequestBody String secret){
 
         try{
@@ -40,6 +40,8 @@ public class PushController {
             if(secret==secret1){
                 System.out.println("helloasasasa");
                 //System.out.println(request);
+            }else{
+                System.out.println("şifre yanlış");
             }
 
 
