@@ -33,13 +33,13 @@ public class PushController {
     }
 
     @RequestMapping(value = "/meraki" ,method= RequestMethod.POST ,consumes = {"application/json"})
-    public String getData(HttpServletRequest request , @RequestBody String secret){
+    public String getData(@RequestBody String secret){
 
         try{
 
             if(secret==secret1){
                 System.out.println("hello");
-                System.out.println(request);
+                //System.out.println(request);
             }
 
 
