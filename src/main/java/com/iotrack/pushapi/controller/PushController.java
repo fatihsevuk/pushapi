@@ -33,13 +33,20 @@ public class PushController {
     }
 
     @RequestMapping(value = "/meraki" ,method= RequestMethod.POST)
-    public String getData(@RequestBody String appMac){
+    public String getData(@RequestBody String appMac , String secret){
+
+
+        if(secret==secret1){
+            System.out.println(appMac);
+
+            return appMac;
+        }else{
+            return "hata";
+        }
 
 
 
-        System.out.println(appMac);
 
-        return appMac;
 
 
 
