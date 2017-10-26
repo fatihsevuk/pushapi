@@ -1,6 +1,7 @@
 package com.iotrack.pushapi.controller;
 
 
+import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 
 
 @RestController
@@ -33,10 +35,10 @@ public class PushController {
     }
 
     @RequestMapping(value = "/meraki" ,method= RequestMethod.POST)
-    public String getData(@RequestBody String secret){
+    public String getData(@RequestBody HttpServletRequest request{
 
 
-        System.out.println(secret);
+        System.out.println(request);
 
             if(secret==secret1){
                 System.out.println("helloasasasa");
