@@ -36,6 +36,7 @@ public class PushController {
     public String getData(@RequestBody String secret){
 
 
+        System.out.println(secret);
 
             if(secret==secret1){
                 System.out.println("helloasasasa");
