@@ -35,20 +35,12 @@ public class PushController {
     }
 
     @RequestMapping(value = "/meraki" ,method= RequestMethod.POST)
-    public String getData(@RequestBody HttpServletRequest request{
+    public Object[] getData(@RequestBody Object[] requestBody){
 
 
-        System.out.println(request);
+        System.out.println(requestBody);
 
-            if(secret==secret1){
-                System.out.println("helloasasasa");
-                //System.out.println(request);
-                return "passed";
-
-            }else{
-                System.out.println("şifre yanlış");
-                return "fail";
-            }
+        return requestBody;
 
 
 
