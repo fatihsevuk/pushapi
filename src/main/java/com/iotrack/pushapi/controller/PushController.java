@@ -44,11 +44,11 @@ public class PushController {
                 System.out.println(body.getVersion());
                 System.out.println(body.getType());
                 System.out.println(body.getSecret());
-                System.out.println(body.getData().getApMac());
 
-                String apMac=body.getData().getApMac();
 
-                return apMac;
+
+
+                return body.toString();
             }else{
                 return "şifre yanlış";
             }

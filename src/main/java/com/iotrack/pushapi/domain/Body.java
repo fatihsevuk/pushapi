@@ -1,5 +1,6 @@
 package com.iotrack.pushapi.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Body {
@@ -7,7 +8,7 @@ public class Body {
     private String version;
     private String secret;
     private String type;
-    private BodyData data;
+    private List<BodyData> data=new ArrayList<>();
 
     public String getVersion() {
         return version;
@@ -33,11 +34,11 @@ public class Body {
         this.type = type;
     }
 
-    public BodyData getData() {
+    public List<BodyData> getData() {
         return data;
     }
 
-    public void setData(BodyData data) {
+    public void setData(List<BodyData> data) {
         this.data = data;
     }
 
