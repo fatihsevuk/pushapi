@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PushController {
 
     private final static String listenport = "9201";   										//TCP listening port
-    private final static String secret1 = "iotrack2017..";
+    private final static String secret1 = "iotrack2017.";
     private final static String validator = "70fea303ce32b9ab2f7f8462a7341c66ab4e81a1";
 
 
@@ -36,14 +36,15 @@ public class PushController {
     @RequestMapping(value = "/meraki" ,method= RequestMethod.POST)
     public String getData(@RequestBody Body body){
 
-        System.out.println(body.getVersion());
-        System.out.println(body.getType());
-        System.out.println(body.getSecret());
-        System.out.println(body.getData().getApMac());
+
 
         try{
             if(body.getSecret()==secret1){
 
+                System.out.println(body.getVersion());
+                System.out.println(body.getType());
+                System.out.println(body.getSecret());
+                System.out.println(body.getData().getApMac());
 
 
                 return body.toString();
