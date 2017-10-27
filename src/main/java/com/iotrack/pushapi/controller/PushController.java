@@ -3,6 +3,8 @@ package com.iotrack.pushapi.controller;
 
 
 import com.iotrack.pushapi.domain.Body;
+import com.iotrack.pushapi.domain.Deneme;
+import com.iotrack.pushapi.service.DenemeService;
 import com.iotrack.pushapi.service.PushService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,6 +27,9 @@ public class PushController {
     @Autowired
     private PushService pushService;
 
+    @Autowired
+    private DenemeService denemeService;
+
 
 
 
@@ -32,6 +37,12 @@ public class PushController {
     public ResponseEntity validate(){
 
         System.out.println("validation sending");
+
+        Deneme deneme=new Deneme();
+        deneme.setId("1");
+        deneme.setName("fatih");
+
+        this.denemeService.addDeneme(deneme);
 
         ResponseEntity<String> responseEntity = new ResponseEntity<>(validator,HttpStatus.OK);
 

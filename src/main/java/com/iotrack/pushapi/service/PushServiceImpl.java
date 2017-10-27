@@ -1,6 +1,7 @@
 package com.iotrack.pushapi.service;
 
 import com.iotrack.pushapi.domain.Body;
+import com.iotrack.pushapi.domain.Deneme;
 import com.iotrack.pushapi.repository.PushRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,4 +18,6 @@ public class PushServiceImpl implements PushService{
         return this.pushRepository.save(body);
 
     }
+
+
 }
