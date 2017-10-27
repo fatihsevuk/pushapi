@@ -34,7 +34,7 @@ public class PushController {
     }
 
     @RequestMapping(value = "/meraki" ,method= RequestMethod.POST)
-    public String getData(@RequestBody Body body){
+    public ResponseEntity getData(@RequestBody Body body){
 
         System.out.println(body.getSecret());
         System.out.println(secret1);
@@ -46,9 +46,9 @@ public class PushController {
                 System.out.println(body.getType());
                 System.out.println(body.getSecret());
 
-                return body.toString();
+                return new  ResponseEntity(body.toString() ,HttpStatus.OK ) ;
             }else{
-                return "şifre yanlış";
+                return new  ResponseEntity("Şifre yanlış" ,HttpStatus.BAD_REQUEST ) ;
             }
 
 
