@@ -1,5 +1,6 @@
 package com.iotrack.pushapi.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Location {
@@ -8,8 +9,8 @@ public class Location {
     private double lang;
     private double unc;
 
-    private List<Double> x;
-    private List<Double> y;
+    private List<Double> x = new ArrayList<>();
+    private List<Double> y = new ArrayList<>();
 
     public double getLat() {
         return lat;

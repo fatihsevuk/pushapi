@@ -1,13 +1,14 @@
 package com.iotrack.pushapi.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BodyData {
 
     private String apMac;
     private List<String> apTags;
-    private List<String> apFloors;
-    private List<Observations> observations;
+    private List<String> apFloors=new ArrayList<>();
+    private Observations observations;
 
     public String getApMac() {
         return apMac;
@@ -33,11 +34,11 @@ public class BodyData {
         this.apFloors = apFloors;
     }
 
-    public List<Observations> getObservations() {
+    public Observations getObservations() {
         return observations;
     }
 
-    public void setObservations(List<Observations> observations) {
+    public void setObservations(Observations observations) {
         this.observations = observations;
     }
 }
