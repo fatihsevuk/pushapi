@@ -5,7 +5,7 @@ import java.util.List;
 public class BodyData {
 
     private String apMac;
-    private String apTags;
+    private List<String> apTags;
     private List<String> apFloors;
     private Observations observations;
 
