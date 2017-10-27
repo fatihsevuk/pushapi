@@ -2,6 +2,7 @@ package com.iotrack.pushapi.controller;
 
 
 
+import com.iotrack.pushapi.domain.Body;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,25 +34,23 @@ public class PushController {
     }
 
     @RequestMapping(value = "/meraki" ,method= RequestMethod.POST)
-    public String getData(@RequestBody String appMac , String secret){
+    public String getData(@RequestBody Body body){
 
 
-        if(secret==secret1){
-            System.out.println(appMac);
 
-            return appMac;
-        }else{
-            return "hata";
+        try{
+            if(body.getSecret()==secret1){
+
+
+
+                return body.toString();
+            }else{
+                return "şifre yanlış";
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
         }
-
-
-
-
-
-
-
-
-
 
 
     }
