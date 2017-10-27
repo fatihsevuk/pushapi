@@ -36,7 +36,10 @@ public class PushController {
     @RequestMapping(value = "/meraki" ,method= RequestMethod.POST)
     public String getData(@RequestBody Body body){
 
-        System.out.println(body.toString());
+        System.out.println(body.getVersion());
+        System.out.println(body.getType());
+        System.out.println(body.getSecret());
+        System.out.println(body.getData().getObservations());
 
         try{
             if(body.getSecret()==secret1){
