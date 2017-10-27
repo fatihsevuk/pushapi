@@ -41,4 +41,14 @@ public class BodyData {
     public void setObservations(List<Observations> observations) {
         this.observations = observations;
     }
+
+    @Override
+    public String toString() {
+        return "BodyData{" +
+                "apMac='" + apMac + '\'' +
+                ", apTags=" + apTags +
+                ", apFloors=" + apFloors +
+                ", observations=" + observations +
+                '}';
+    }
 }

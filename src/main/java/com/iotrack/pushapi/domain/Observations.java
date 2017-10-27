@@ -93,4 +93,20 @@ public class Observations {
     public void setLocation(Location location) {
         this.location = location;
     }
+
+    @Override
+    public String toString() {
+        return "Observations{" +
+                "clientMac='" + clientMac + '\'' +
+                ", ipv4='" + ipv4 + '\'' +
+                ", ipv6='" + ipv6 + '\'' +
+                ", seenTime='" + seenTime + '\'' +
+                ", seenEpoch='" + seenEpoch + '\'' +
+                ", ssid='" + ssid + '\'' +
+                ", rssi=" + rssi +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", os='" + os + '\'' +
+                ", location=" + location +
+                '}';
+    }
 }

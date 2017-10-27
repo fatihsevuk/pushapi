@@ -36,26 +36,23 @@ public class PushController {
     @RequestMapping(value = "/meraki" ,method= RequestMethod.POST)
     public String getData(@RequestBody Body body){
 
+        System.out.println(body.getSecret());
+        System.out.println(secret1);
 
 
-        try{
-            if(body.getSecret()==secret1){
+            if(body.getSecret().toString().equals(secret1)){
 
                 System.out.println(body.getVersion());
                 System.out.println(body.getType());
                 System.out.println(body.getSecret());
 
-
-
-
                 return body.toString();
             }else{
                 return "şifre yanlış";
             }
-        }catch(Exception e){
-            e.printStackTrace();
-            return "hata";
-        }
+
+
+
 
 
     }

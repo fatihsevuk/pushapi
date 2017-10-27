@@ -51,4 +51,15 @@ public class Location {
     public void setY(List<Double> y) {
         this.y = y;
     }
+
+    @Override
+    public String toString() {
+        return "Location{" +
+                "lat=" + lat +
+                ", lang=" + lang +
+                ", unc=" + unc +
+                ", x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }
