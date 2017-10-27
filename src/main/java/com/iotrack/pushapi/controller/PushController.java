@@ -38,6 +38,7 @@ public class PushController {
 
         System.out.println(body.getSecret());
         System.out.println(secret1);
+        System.out.println(body.getData());
 
 
             if(body.getSecret().toString().equals(secret1)){
