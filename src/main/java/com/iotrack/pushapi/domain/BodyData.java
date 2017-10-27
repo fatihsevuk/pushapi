@@ -8,7 +8,7 @@ public class BodyData {
     private String apMac;
     private List<String> apTags;
     private List<String> apFloors=new ArrayList<>();
-    private Observations observations;
+    private List<Observations> observations=new ArrayList<>();
 
     public String getApMac() {
         return apMac;
@@ -34,11 +34,11 @@ public class BodyData {
         this.apFloors = apFloors;
     }
 
-    public Observations getObservations() {
+    public List<Observations> getObservations() {
         return observations;
     }
 
-    public void setObservations(Observations observations) {
+    public void setObservations(List<Observations> observations) {
         this.observations = observations;
     }
 }

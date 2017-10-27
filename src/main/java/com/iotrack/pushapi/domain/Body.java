@@ -7,7 +7,7 @@ public class Body {
     private String version;
     private String secret;
     private String type;
-    private List<BodyData> data;
+    private BodyData data;
 
     public String getVersion() {
         return version;
@@ -33,11 +33,11 @@ public class Body {
         this.type = type;
     }
 
-    public List<BodyData> getData() {
+    public BodyData getData() {
         return data;
     }
 
-    public void setData(List<BodyData> data) {
+    public void setData(BodyData data) {
         this.data = data;
     }
 }
