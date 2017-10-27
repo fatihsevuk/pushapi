@@ -39,7 +39,7 @@ public class PushController {
         System.out.println(body.getVersion());
         System.out.println(body.getType());
         System.out.println(body.getSecret());
-        System.out.println(body.getData());
+        System.out.println(body.getData().getApMac());
 
         try{
             if(body.getSecret()==secret1){
