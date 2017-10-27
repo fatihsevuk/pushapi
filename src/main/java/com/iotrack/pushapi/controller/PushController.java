@@ -46,8 +46,9 @@ public class PushController {
                 System.out.println(body.getSecret());
                 System.out.println(body.getData().getApMac());
 
+                String apMac=body.getData().getApMac();
 
-                return body.toString();
+                return apMac;
             }else{
                 return "şifre yanlış";
             }
