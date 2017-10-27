@@ -1,9 +1,13 @@
 package com.iotrack.pushapi.domain;
 
+import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Body {
+
+    @Id
+    private String id;
 
     private String version;
     private String secret;

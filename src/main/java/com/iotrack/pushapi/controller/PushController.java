@@ -3,6 +3,8 @@ package com.iotrack.pushapi.controller;
 
 
 import com.iotrack.pushapi.domain.Body;
+import com.iotrack.pushapi.service.PushService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +21,10 @@ public class PushController {
     private final static String listenport = "9201";   										//TCP listening port
     private final static String secret1 = "iotrack2017.";
     private final static String validator = "70fea303ce32b9ab2f7f8462a7341c66ab4e81a1";
+
+    @Autowired
+    private PushService pushService;
+
 
 
 
@@ -46,6 +52,8 @@ public class PushController {
                 System.out.println(body.getVersion());
                 System.out.println(body.getType());
                 System.out.println(body.getSecret());
+
+                this.pushService.addBody(body);
 
                 return new  ResponseEntity(body.toString() ,HttpStatus.OK );
             }else{
