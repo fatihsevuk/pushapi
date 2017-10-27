@@ -17,11 +17,11 @@ public class BodyData {
         this.apMac = apMac;
     }
 
-    public String getApTags() {
+    public List<String> getApTags() {
         return apTags;
     }
 
-    public void setApTags(String apTags) {
+    public void setApTags(List<String> apTags) {
         this.apTags = apTags;
     }
 
