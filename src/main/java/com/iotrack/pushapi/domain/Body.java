@@ -40,4 +40,14 @@ public class Body {
     public void setData(BodyData data) {
         this.data = data;
     }
+
+    @Override
+    public String toString() {
+        return "Body{" +
+                "version='" + version + '\'' +
+                ", secret='" + secret + '\'' +
+                ", type='" + type + '\'' +
+                ", data=" + data +
+                '}';
+    }
 }
