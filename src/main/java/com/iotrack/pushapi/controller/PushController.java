@@ -7,6 +7,7 @@ import com.iotrack.pushapi.domain.Deneme;
 import com.iotrack.pushapi.service.DenemeService;
 import com.iotrack.pushapi.service.PushService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,9 +30,6 @@ public class PushController {
 
     @Autowired
     private DenemeService denemeService;
-
-
-
 
     @RequestMapping(value = "/meraki" ,method= RequestMethod.GET )
     public ResponseEntity validate(){
